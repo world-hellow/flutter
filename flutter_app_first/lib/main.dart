@@ -1,82 +1,65 @@
 import 'package:flutter/material.dart';
 
-void main() {
+main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //卡片式布局默认是撑满整个外部容器的，如果你想设置卡片的宽高，需要在外部容器就进行制定。
+    var card = Card(
+      color: Colors.lightGreenAccent,
+      child: Column(
+        children: <Widget>[
+          //ListTile不光可以使用在ListView组件中，然后容器组件其实都可以使用。
+          ListTile(
+            title: Text(
+              '吉林省吉林市昌邑区',
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+            subtitle: Text('技术胖:1513938888'),
+            leading: Icon(
+              Icons.account_box,
+              color: Colors.lightBlueAccent,
+            ),
+          ),
+          new Divider(),//分割线
+          ListTile(
+            title: new Text(
+              '北京市海淀区中国科技大学',
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+            subtitle: new Text('胜宏宇:1513938888'),
+            leading: new Icon(
+              Icons.account_box,
+              color: Colors.lightBlue,
+            ),
+          ),
+          new Divider(),
+          ListTile(
+            title: new Text(
+              '河南省濮阳市百姓办公楼',
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
+            subtitle: new Text('JSPang:1513938888'),
+            leading: new Icon(
+              Icons.account_box,
+              color: Colors.lightBlue,
+            ),
+          ),
+          new Divider(),
+        ],
+      ),
+    );
     return MaterialApp(
-        title: 'hello flutter',
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('布局组件--层叠布局Stack'),
-          ),
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text('在头像上方再放入一个容器，容器里边写上字，这时候我们就可以使用Stack布局'),
-              CircleAvatar(
-                backgroundColor: Colors.yellow,
-                backgroundImage: new NetworkImage(
-                    'http://blogimages.jspang.com/blogtouxiang1.jpg'),
-                radius: 50.0,
-              ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  color: Colors.pink,
-                  gradient: LinearGradient(
-                      colors: [Colors.lightBlue, Colors.green, Colors.pink]),
-                ),
-                child: Text(
-                  'hello flutter',
-                  style: TextStyle(
-                    color: Colors.lightGreen,
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(10.0),
-                child: Center(
-                  child: Text(
-                    '下方两者合体,奥特曼变身',
-                    style: TextStyle(color: Colors.red),
-                  ),
-                ),
-              ),
-              Stack(
-                alignment: const FractionalOffset(0.5, 1), //取值0-1 0左对齐或者上对其  1右对齐或者下对齐
-                // children中先写的会被覆盖在下面
-                children: <Widget>[
-                  CircleAvatar(
-                    backgroundColor: Colors.yellow,
-                    backgroundImage: new NetworkImage(
-                        'http://blogimages.jspang.com/blogtouxiang1.jpg'),
-                    radius: 50.0,
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
-                      color: Colors.pink,
-                      gradient: LinearGradient(colors: [
-                        Colors.lightBlue,
-                        Colors.green,
-                        Colors.pink
-                      ]),
-                    ),
-                    child: Text(
-                      'hello flutter',
-                      style: TextStyle(
-                        color: Colors.lightGreen,
-                      ),
-                    ),
-                  ),
-                ],
-              )
-            ],
-          ),
-        ));
+      title: 'hello world',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Card组件的使用'),
+        ),
+        body: card,
+      ),
+    );
   }
 }
