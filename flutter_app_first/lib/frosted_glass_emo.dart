@@ -18,6 +18,11 @@ class FrostedGlassDemo extends StatelessWidget {
                 filter: ImageFilter.blur(sigmaX: 5.0,sigmaY: 5.0), //图片模糊过滤，横向竖向都设置5.0,
                 child: Opacity(//透明控件
                   opacity: 0.5,
+                  child: Container(//容器组件
+                    width: 500.0,
+                    height: 700.0,
+
+                  ),
 
                 )
               )
