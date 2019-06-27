@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'pages.dart';
+import 'pages.dart';
 void main() {
   runApp(MyApp());
 }
@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '路由动画效果',
-       home: Text("6666"),
+      home: FirstPage(),
     );
   }
 }

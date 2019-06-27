@@ -44,7 +44,7 @@ class _BottomAppBarWidgetState extends State<BottomAppBarWidget> {
                 icon: Icon(Icons.home), 
                 color: Colors.white, 
                 onPressed: () {}),
-            RaisedButton(child: Text('文字'),),
+            RaisedButton(child: Text('文字'),onPressed: (){},),
             Text('666')
           ],
         ),

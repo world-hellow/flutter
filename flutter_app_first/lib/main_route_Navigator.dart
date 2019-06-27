@@ -47,9 +47,9 @@ class SecondScreen extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          onPressed:()=>{
+          onPressed:()=>
             Navigator.pop(context)
-          },
+          ,
           child: Text('返回上一页'),
           color: Colors.yellow,
         ),
