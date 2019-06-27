@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'bottom_app_bar_demo.dart';
+import 'bottom_app_bar_demo.dart';
 
 void main() {
-  runApp(MaterialApp(title: 'BottomAppBar', home: Text('6666')));
+  runApp(MaterialApp(title: 'BottomAppBar', home: BottomAppBarDemo()));
 }
 
 

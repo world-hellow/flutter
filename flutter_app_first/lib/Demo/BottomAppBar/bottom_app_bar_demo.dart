@@ -1,13 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'bottom_app_bar_demo.dart';
-
-void main() {
-  runApp(MaterialApp(title: 'BottomAppBar', home: Text('6666')));
-}
-
-
-
-/* 摘出为 bottom_app_bar_demo
 import 'each_view.dart';
 //statefulwidget
 class BottomAppBarDemo extends StatefulWidget {
@@ -88,4 +79,3 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
     );
   }
 }
-*/
