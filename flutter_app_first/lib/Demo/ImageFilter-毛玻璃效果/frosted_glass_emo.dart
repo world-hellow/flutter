@@ -42,7 +42,7 @@ class FrostedGlassDemo extends StatelessWidget {
                     decoration: BoxDecoration(color:Colors.yellow.shade100), //盒子装饰器，进行装饰，设置颜色为灰色
                     child: Center(
                       child: Text(
-                        '美女',
+                        'Hello girl',
                         style: Theme.of(context).textTheme.display3, //设置比较酷炫的字体
                       ),
                     ),
